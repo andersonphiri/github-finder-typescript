@@ -2,6 +2,7 @@ import React from 'react'
 
 import {FaGithub} from 'react-icons/fa';
 import {Link } from 'react-router-dom';
+import Alert from './Alert';
 
 export type NavabarModel = {
     title : string 
@@ -28,6 +29,8 @@ const Navbar = ({title} : NavabarModel) => {
                       </Link>
             </div>
          </div>
+        
+        
         </div>
         
         </nav>
