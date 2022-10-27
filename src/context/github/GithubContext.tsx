@@ -30,9 +30,9 @@ export type SimplifiedGithubContextModel = {
 
 export const GithubContext = createContext<SimplifiedGithubContextModel>({});
 
-export const DEFAULT_USERS_OFFSET_INDEX = 0;
-export const DEFAULT_ITEMS_PER_PAGE = 12;
-export const DEFAULT_CURRENT_PAGE = 1;
+export const DEFAULT_USERS_OFFSET_INDEX =  process.env.DEFAULT_USERS_OFFSET_INDEX === undefined ? 0 : parseInt(process.env.DEFAULT_USERS_OFFSET_INDEX);
+export const DEFAULT_ITEMS_PER_PAGE = process.env.DEFAULT_ITEMS_PER_PAGE === undefined ? 24 : parseInt(process.env.DEFAULT_ITEMS_PER_PAGE);
+export const DEFAULT_CURRENT_PAGE = process.env.DEFAULT_CURRENT_PAGE === undefined ? 1 : parseInt(process.env.DEFAULT_CURRENT_PAGE);
 
 export const GithubProvider = ({children} : SimplifiedGithubContextModel) => {
    

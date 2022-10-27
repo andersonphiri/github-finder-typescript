@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Alert from "./components/layout/Alert";
+import AlertModal from "./components/layout/AlertModal";
 import Footer from "./components/layout/Footer";
 import Navbar from "./components/layout/Navbar";
 import User from "./components/users/User";
@@ -13,14 +14,16 @@ function App() {
   return (
 
   <GithubProvider>
-    <AlertProvider>
+      <AlertProvider>
+     
     <Router>
-        <div className="flex flex-col justify-between h-screen">
-          <Navbar />
-
-          <main className="container mx-auto px-3 pb-12">
+        <div className="flex flex-col justify-between h-screen" >
+            <Navbar />
             <Alert />
-            {/* <Switch> */}
+            {/* <AlertModal /> */}
+
+          <main className="container mx-auto px-3 pb-24">
+           
             <Routes>
               <Route path="/" element={<Home />}></Route>
               <Route path="/about" element={<About />}></Route>
@@ -28,7 +31,6 @@ function App() {
               <Route path="/notfound" element={<NotFound />}></Route>
               <Route path="/*" element={<NotFound />}></Route>
             </Routes>
-            {/* </Switch> */}
             
           </main>
 

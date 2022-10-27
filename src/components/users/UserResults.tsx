@@ -71,4 +71,3 @@ const UserResults = () => {
 }
 
 export default UserResults;
-// https://subscription.packtpub.com/video/application-development/9781838645274/p9/video9_7/clean-up-fetch-users

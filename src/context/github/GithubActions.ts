@@ -109,8 +109,8 @@ class DefaultGithubClientService implements IGithubClientService {
         }
         return result;
     }
-    loginAsync(token: string): Promise<void> {
-        throw new Error("Method not implemented.");
+    async loginAsync(token: string): Promise<void> {
+        await loginAsync()
     }
     async getUserReposAsync(login: string): Promise<IGithubMinimumRepo[]> {
         await octokit.rest.users.getAuthenticated();

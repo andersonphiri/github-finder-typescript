@@ -1,2 +1,4 @@
 import spinner from './spinner.gif';
-export {spinner};
+import bush_walker from './bush_walker.jpg';
+import shopping from './shopping.jpg'
+export {spinner, bush_walker, shopping};
